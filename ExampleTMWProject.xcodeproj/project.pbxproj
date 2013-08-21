@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E03DAC217C4F1BB00A6EF70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E03DAC117C4F1BB00A6EF70 /* UIKit.framework */; };
+		7E03DAC417C4F1BB00A6EF70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E03DAC317C4F1BB00A6EF70 /* Foundation.framework */; };
+		7E03DAC617C4F1BB00A6EF70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E03DAC517C4F1BB00A6EF70 /* CoreGraphics.framework */; };
+		7E03DACC17C4F1BB00A6EF70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DACA17C4F1BB00A6EF70 /* InfoPlist.strings */; };
+		7E03DACE17C4F1BB00A6EF70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E03DACD17C4F1BB00A6EF70 /* main.m */; };
+		7E03DAD217C4F1BB00A6EF70 /* TMWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E03DAD117C4F1BB00A6EF70 /* TMWAppDelegate.m */; };
+		7E03DAD417C4F1BB00A6EF70 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAD317C4F1BB00A6EF70 /* Default.png */; };
+		7E03DAD617C4F1BB00A6EF70 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAD517C4F1BB00A6EF70 /* Default@2x.png */; };
+		7E03DAD817C4F1BB00A6EF70 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAD717C4F1BB00A6EF70 /* Default-568h@2x.png */; };
+		7E03DADB17C4F1BB00A6EF70 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAD917C4F1BB00A6EF70 /* MainStoryboard_iPhone.storyboard */; };
+		7E03DADE17C4F1BB00A6EF70 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DADC17C4F1BB00A6EF70 /* MainStoryboard_iPad.storyboard */; };
+		7E03DAE117C4F1BB00A6EF70 /* TMWFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E03DAE017C4F1BB00A6EF70 /* TMWFirstViewController.m */; };
+		7E03DAE317C4F1BB00A6EF70 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAE217C4F1BB00A6EF70 /* first.png */; };
+		7E03DAE517C4F1BB00A6EF70 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAE417C4F1BB00A6EF70 /* first@2x.png */; };
+		7E03DAE817C4F1BB00A6EF70 /* TMWSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E03DAE717C4F1BB00A6EF70 /* TMWSecondViewController.m */; };
+		7E03DAEA17C4F1BB00A6EF70 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAE917C4F1BB00A6EF70 /* second.png */; };
+		7E03DAEC17C4F1BB00A6EF70 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAEB17C4F1BB00A6EF70 /* second@2x.png */; };
+		7E03DAF417C4F1BB00A6EF70 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E03DAF317C4F1BB00A6EF70 /* SenTestingKit.framework */; };
+		7E03DAF517C4F1BB00A6EF70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E03DAC117C4F1BB00A6EF70 /* UIKit.framework */; };
+		7E03DAF617C4F1BB00A6EF70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E03DAC317C4F1BB00A6EF70 /* Foundation.framework */; };
+		7E03DAFE17C4F1BB00A6EF70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E03DAFC17C4F1BB00A6EF70 /* InfoPlist.strings */; };
+		7E03DB0117C4F1BB00A6EF70 /* ExampleTMWProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E03DB0017C4F1BB00A6EF70 /* ExampleTMWProjectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E03DAF717C4F1BB00A6EF70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E03DAB617C4F1BB00A6EF70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E03DABD17C4F1BB00A6EF70;
+			remoteInfo = ExampleTMWProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7E03DABE17C4F1BB00A6EF70 /* ExampleTMWProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleTMWProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E03DAC117C4F1BB00A6EF70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7E03DAC317C4F1BB00A6EF70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7E03DAC517C4F1BB00A6EF70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7E03DAC917C4F1BB00A6EF70 /* ExampleTMWProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTMWProject-Info.plist"; sourceTree = "<group>"; };
+		7E03DACB17C4F1BB00A6EF70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E03DACD17C4F1BB00A6EF70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7E03DACF17C4F1BB00A6EF70 /* ExampleTMWProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExampleTMWProject-Prefix.pch"; sourceTree = "<group>"; };
+		7E03DAD017C4F1BB00A6EF70 /* TMWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMWAppDelegate.h; sourceTree = "<group>"; };
+		7E03DAD117C4F1BB00A6EF70 /* TMWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMWAppDelegate.m; sourceTree = "<group>"; };
+		7E03DAD317C4F1BB00A6EF70 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7E03DAD517C4F1BB00A6EF70 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7E03DAD717C4F1BB00A6EF70 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7E03DADA17C4F1BB00A6EF70 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7E03DADD17C4F1BB00A6EF70 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		7E03DADF17C4F1BB00A6EF70 /* TMWFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMWFirstViewController.h; sourceTree = "<group>"; };
+		7E03DAE017C4F1BB00A6EF70 /* TMWFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMWFirstViewController.m; sourceTree = "<group>"; };
+		7E03DAE217C4F1BB00A6EF70 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		7E03DAE417C4F1BB00A6EF70 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		7E03DAE617C4F1BB00A6EF70 /* TMWSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMWSecondViewController.h; sourceTree = "<group>"; };
+		7E03DAE717C4F1BB00A6EF70 /* TMWSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMWSecondViewController.m; sourceTree = "<group>"; };
+		7E03DAE917C4F1BB00A6EF70 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		7E03DAEB17C4F1BB00A6EF70 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		7E03DAF217C4F1BB00A6EF70 /* ExampleTMWProjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTMWProjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E03DAF317C4F1BB00A6EF70 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7E03DAFB17C4F1BB00A6EF70 /* ExampleTMWProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTMWProjectTests-Info.plist"; sourceTree = "<group>"; };
+		7E03DAFD17C4F1BB00A6EF70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7E03DAFF17C4F1BB00A6EF70 /* ExampleTMWProjectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTMWProjectTests.h; sourceTree = "<group>"; };
+		7E03DB0017C4F1BB00A6EF70 /* ExampleTMWProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTMWProjectTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E03DABB17C4F1BB00A6EF70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E03DAC217C4F1BB00A6EF70 /* UIKit.framework in Frameworks */,
+				7E03DAC417C4F1BB00A6EF70 /* Foundation.framework in Frameworks */,
+				7E03DAC617C4F1BB00A6EF70 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E03DAEE17C4F1BB00A6EF70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E03DAF417C4F1BB00A6EF70 /* SenTestingKit.framework in Frameworks */,
+				7E03DAF517C4F1BB00A6EF70 /* UIKit.framework in Frameworks */,
+				7E03DAF617C4F1BB00A6EF70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E03DAB517C4F1BB00A6EF70 = {
+			isa = PBXGroup;
+			children = (
+				7E03DAC717C4F1BB00A6EF70 /* ExampleTMWProject */,
+				7E03DAF917C4F1BB00A6EF70 /* ExampleTMWProjectTests */,
+				7E03DAC017C4F1BB00A6EF70 /* Frameworks */,
+				7E03DABF17C4F1BB00A6EF70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E03DABF17C4F1BB00A6EF70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E03DABE17C4F1BB00A6EF70 /* ExampleTMWProject.app */,
+				7E03DAF217C4F1BB00A6EF70 /* ExampleTMWProjectTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E03DAC017C4F1BB00A6EF70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E03DAC117C4F1BB00A6EF70 /* UIKit.framework */,
+				7E03DAC317C4F1BB00A6EF70 /* Foundation.framework */,
+				7E03DAC517C4F1BB00A6EF70 /* CoreGraphics.framework */,
+				7E03DAF317C4F1BB00A6EF70 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E03DAC717C4F1BB00A6EF70 /* ExampleTMWProject */ = {
+			isa = PBXGroup;
+			children = (
+				7E03DAD017C4F1BB00A6EF70 /* TMWAppDelegate.h */,
+				7E03DAD117C4F1BB00A6EF70 /* TMWAppDelegate.m */,
+				7E03DAD917C4F1BB00A6EF70 /* MainStoryboard_iPhone.storyboard */,
+				7E03DADC17C4F1BB00A6EF70 /* MainStoryboard_iPad.storyboard */,
+				7E03DADF17C4F1BB00A6EF70 /* TMWFirstViewController.h */,
+				7E03DAE017C4F1BB00A6EF70 /* TMWFirstViewController.m */,
+				7E03DAE217C4F1BB00A6EF70 /* first.png */,
+				7E03DAE417C4F1BB00A6EF70 /* first@2x.png */,
+				7E03DAE617C4F1BB00A6EF70 /* TMWSecondViewController.h */,
+				7E03DAE717C4F1BB00A6EF70 /* TMWSecondViewController.m */,
+				7E03DAE917C4F1BB00A6EF70 /* second.png */,
+				7E03DAEB17C4F1BB00A6EF70 /* second@2x.png */,
+				7E03DAC817C4F1BB00A6EF70 /* Supporting Files */,
+			);
+			path = ExampleTMWProject;
+			sourceTree = "<group>";
+		};
+		7E03DAC817C4F1BB00A6EF70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E03DAC917C4F1BB00A6EF70 /* ExampleTMWProject-Info.plist */,
+				7E03DACA17C4F1BB00A6EF70 /* InfoPlist.strings */,
+				7E03DACD17C4F1BB00A6EF70 /* main.m */,
+				7E03DACF17C4F1BB00A6EF70 /* ExampleTMWProject-Prefix.pch */,
+				7E03DAD317C4F1BB00A6EF70 /* Default.png */,
+				7E03DAD517C4F1BB00A6EF70 /* Default@2x.png */,
+				7E03DAD717C4F1BB00A6EF70 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E03DAF917C4F1BB00A6EF70 /* ExampleTMWProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E03DAFF17C4F1BB00A6EF70 /* ExampleTMWProjectTests.h */,
+				7E03DB0017C4F1BB00A6EF70 /* ExampleTMWProjectTests.m */,
+				7E03DAFA17C4F1BB00A6EF70 /* Supporting Files */,
+			);
+			path = ExampleTMWProjectTests;
+			sourceTree = "<group>";
+		};
+		7E03DAFA17C4F1BB00A6EF70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E03DAFB17C4F1BB00A6EF70 /* ExampleTMWProjectTests-Info.plist */,
+				7E03DAFC17C4F1BB00A6EF70 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E03DABD17C4F1BB00A6EF70 /* ExampleTMWProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E03DB0417C4F1BB00A6EF70 /* Build configuration list for PBXNativeTarget "ExampleTMWProject" */;
+			buildPhases = (
+				7E03DABA17C4F1BB00A6EF70 /* Sources */,
+				7E03DABB17C4F1BB00A6EF70 /* Frameworks */,
+				7E03DABC17C4F1BB00A6EF70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExampleTMWProject;
+			productName = ExampleTMWProject;
+			productReference = 7E03DABE17C4F1BB00A6EF70 /* ExampleTMWProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E03DAF117C4F1BB00A6EF70 /* ExampleTMWProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E03DB0717C4F1BB00A6EF70 /* Build configuration list for PBXNativeTarget "ExampleTMWProjectTests" */;
+			buildPhases = (
+				7E03DAED17C4F1BB00A6EF70 /* Sources */,
+				7E03DAEE17C4F1BB00A6EF70 /* Frameworks */,
+				7E03DAEF17C4F1BB00A6EF70 /* Resources */,
+				7E03DAF017C4F1BB00A6EF70 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E03DAF817C4F1BB00A6EF70 /* PBXTargetDependency */,
+			);
+			name = ExampleTMWProjectTests;
+			productName = ExampleTMWProjectTests;
+			productReference = 7E03DAF217C4F1BB00A6EF70 /* ExampleTMWProjectTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E03DAB617C4F1BB00A6EF70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TMW;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = DZhurov;
+			};
+			buildConfigurationList = 7E03DAB917C4F1BB00A6EF70 /* Build configuration list for PBXProject "ExampleTMWProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7E03DAB517C4F1BB00A6EF70;
+			productRefGroup = 7E03DABF17C4F1BB00A6EF70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E03DABD17C4F1BB00A6EF70 /* ExampleTMWProject */,
+				7E03DAF117C4F1BB00A6EF70 /* ExampleTMWProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E03DABC17C4F1BB00A6EF70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E03DACC17C4F1BB00A6EF70 /* InfoPlist.strings in Resources */,
+				7E03DAD417C4F1BB00A6EF70 /* Default.png in Resources */,
+				7E03DAD617C4F1BB00A6EF70 /* Default@2x.png in Resources */,
+				7E03DAD817C4F1BB00A6EF70 /* Default-568h@2x.png in Resources */,
+				7E03DADB17C4F1BB00A6EF70 /* MainStoryboard_iPhone.storyboard in Resources */,
+				7E03DADE17C4F1BB00A6EF70 /* MainStoryboard_iPad.storyboard in Resources */,
+				7E03DAE317C4F1BB00A6EF70 /* first.png in Resources */,
+				7E03DAE517C4F1BB00A6EF70 /* first@2x.png in Resources */,
+				7E03DAEA17C4F1BB00A6EF70 /* second.png in Resources */,
+				7E03DAEC17C4F1BB00A6EF70 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E03DAEF17C4F1BB00A6EF70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E03DAFE17C4F1BB00A6EF70 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E03DAF017C4F1BB00A6EF70 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E03DABA17C4F1BB00A6EF70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E03DACE17C4F1BB00A6EF70 /* main.m in Sources */,
+				7E03DAD217C4F1BB00A6EF70 /* TMWAppDelegate.m in Sources */,
+				7E03DAE117C4F1BB00A6EF70 /* TMWFirstViewController.m in Sources */,
+				7E03DAE817C4F1BB00A6EF70 /* TMWSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E03DAED17C4F1BB00A6EF70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E03DB0117C4F1BB00A6EF70 /* ExampleTMWProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E03DAF817C4F1BB00A6EF70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E03DABD17C4F1BB00A6EF70 /* ExampleTMWProject */;
+			targetProxy = 7E03DAF717C4F1BB00A6EF70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E03DACA17C4F1BB00A6EF70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E03DACB17C4F1BB00A6EF70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7E03DAD917C4F1BB00A6EF70 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E03DADA17C4F1BB00A6EF70 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		7E03DADC17C4F1BB00A6EF70 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E03DADD17C4F1BB00A6EF70 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		7E03DAFC17C4F1BB00A6EF70 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E03DAFD17C4F1BB00A6EF70 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E03DB0217C4F1BB00A6EF70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E03DB0317C4F1BB00A6EF70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E03DB0517C4F1BB00A6EF70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExampleTMWProject/ExampleTMWProject-Prefix.pch";
+				INFOPLIST_FILE = "ExampleTMWProject/ExampleTMWProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7E03DB0617C4F1BB00A6EF70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExampleTMWProject/ExampleTMWProject-Prefix.pch";
+				INFOPLIST_FILE = "ExampleTMWProject/ExampleTMWProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7E03DB0817C4F1BB00A6EF70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ExampleTMWProject.app/ExampleTMWProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExampleTMWProject/ExampleTMWProject-Prefix.pch";
+				INFOPLIST_FILE = "ExampleTMWProjectTests/ExampleTMWProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7E03DB0917C4F1BB00A6EF70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ExampleTMWProject.app/ExampleTMWProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExampleTMWProject/ExampleTMWProject-Prefix.pch";
+				INFOPLIST_FILE = "ExampleTMWProjectTests/ExampleTMWProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E03DAB917C4F1BB00A6EF70 /* Build configuration list for PBXProject "ExampleTMWProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E03DB0217C4F1BB00A6EF70 /* Debug */,
+				7E03DB0317C4F1BB00A6EF70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E03DB0417C4F1BB00A6EF70 /* Build configuration list for PBXNativeTarget "ExampleTMWProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E03DB0517C4F1BB00A6EF70 /* Debug */,
+				7E03DB0617C4F1BB00A6EF70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7E03DB0717C4F1BB00A6EF70 /* Build configuration list for PBXNativeTarget "ExampleTMWProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E03DB0817C4F1BB00A6EF70 /* Debug */,
+				7E03DB0917C4F1BB00A6EF70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E03DAB617C4F1BB00A6EF70 /* Project object */;
+}
