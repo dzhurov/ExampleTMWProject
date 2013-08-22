@@ -9,6 +9,19 @@
 #endif
 
 #ifdef __OBJC__
+
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "extobjc.h"
+    #import "MWLogsExtension.h"
+    #import "DDLog.h"
+    #import "NSDictionary+NullValue.h"
+    #import "NSDateFormatter+MWFormats.h"
+
+#ifdef DEBUG
+    static const int ddLogLevel = LOG_LEVEL_VERBOSE | LOG_FLAG_REQUEST | LOG_FLAG_RESPONSE_OK | LOG_FLAG_RESPONSE_ERROR | LOG_FLAG_SLED_INFO | LOG_FLAG_CRASH;
+#else
+    static const int ddLogLevel = LOG_LEVEL_WARN | LOG_FLAG_RESPONSE_ERROR | LOG_FLAG_CRASH | LOG_FLAG_SLED_INFO;
+#endif
+
 #endif

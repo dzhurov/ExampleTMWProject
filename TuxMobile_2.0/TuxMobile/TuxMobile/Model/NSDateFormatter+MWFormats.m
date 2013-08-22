@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Dmitry Zhurov. All rights reserved.
 //
 
-#import "NSDateFormatter+MWGMT.h"
+#import "NSDateFormatter+MWFormats.h"
 
 @implementation NSDateFormatter (MWFormats)
 

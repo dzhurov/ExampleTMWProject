@@ -9,17 +9,19 @@
 #import "MWAppDelegate.h"
 
 #import "MWViewController.h"
+#import "MWNavigationManager.h"
+
 
 @implementation MWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[MWViewController alloc] initWithNibName:@"MWViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    [[MWNavigationManager sharedNavigationManager] showFirstViewController];
+    NSString *lol = @keypath( ((MWAppDelegate*)nil), viewController);
+    NSLog(@"%@", lol);
     return YES;
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

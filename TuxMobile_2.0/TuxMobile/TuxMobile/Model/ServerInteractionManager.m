@@ -9,7 +9,8 @@
 
 #import "ServerInteractionManager.h"
 #include <execinfo.h>
-#import "AFNetrowrking.h"
+#import "AFNetworking.h"
+#import "JSONKit.h"
 
 #define LogRequest(url, body) NSLogBlue(@"%s\nRequest: %@\nbody: %@\n", __PRETTY_FUNCTION__, url, body)
 #define LogError(requestOperation, error) NSLogRed(@"Request failed:%@ ERROR: %@", [requestOperation request], error);
@@ -54,7 +55,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
 
 - (NSURLRequest *)postRequestWithPath:(NSString *)urlString httpBody:(NSData *)data
 {
-    NSMutableURLRequest *theRequest = [httpClient requestWithMethod:@"POST" path:urlString parameters:nil];
+    NSMutableURLRequest *theRequest = [_httpClient requestWithMethod:@"POST" path:urlString parameters:nil];
     [theRequest setTimeoutInterval:kRequestTimeoutInterval];
     [theRequest addValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [theRequest addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -65,7 +66,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
 
 - (NSURLRequest *)getRequestWithPath:(NSString *)urlString parameters: (NSDictionary *)parameters
 {
-    NSMutableURLRequest *theRequest = [httpClient requestWithMethod:@"GET" path:urlString parameters:parameters];
+    NSMutableURLRequest *theRequest = [_httpClient requestWithMethod:@"GET" path:urlString parameters:parameters];
     [theRequest setTimeoutInterval:kRequestTimeoutInterval];
     [theRequest addValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [theRequest addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -75,7 +76,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
 - (void)parseResponseData:(NSData *)data forURLRequest:(NSURLRequest *)request callBlock:(ResponseBlock)responseBlock invocation:(NSInvocation*)invocation
 {
     NSError *error = nil;
-    NSString *responseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] ;
     
     NSDictionary *responseDict = [[JSONDecoder decoder] objectWithData:data error: &error];
     if (error){
@@ -85,7 +86,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
         }
         NSString *eDescription = responseString;
         
-        NSDictionary *eDict = [NSDictionary dictionaryWithObjectsAndKeys:eDescription,  NSLocalizedDescriptionKey, kErrorTitle, kErrorTitleKey, nil];
+        NSDictionary *eDict = [NSDictionary dictionaryWithObjectsAndKeys:eDescription,  NSLocalizedDescriptionKey, nil];
         error = [NSError errorWithDomain:@"ServerInteractionManager" code:0 userInfo:eDict];
         
         DDLogError(@"Parsing string: %@\nERROR: %@", responseString, error);
@@ -100,8 +101,8 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
         NSString *errorDomain = [errorCode stringByTrimmingCharactersInSet:[[NSCharacterSet letterCharacterSet] invertedSet]];
         int eCode = [[errorCode stringByTrimmingCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] intValue];
         if ([errorDomain isEqualToString:kAuthErrorPrefix]){
-            if (eCode == AUTH_ERROR_TOKEN_IS_INVALID || eCode == AUTH_ERROR_TOKEN_IS_EXPIRED){
-                if ([[AccountManager sharedAccountManager] reloginSynchronous: &error]){
+            if (eCode == AUTH_ERROR_TOKEN_IS_INVALID){
+                if ([_accountManager reloginSynchronous: &error]){
                     [invocation invoke];
                     return;
                 }
@@ -109,7 +110,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
         }
         
         NSString *eDescription = [[responseDict objectForKey:@"error"] objectForKeyOrNilIfNotExists:@"message"];
-        NSDictionary *eDict = [NSDictionary dictionaryWithObjectsAndKeys:eDescription,  NSLocalizedDescriptionKey, kErrorTitle, kErrorTitleKey, nil];
+        NSDictionary *eDict = [NSDictionary dictionaryWithObjectsAndKeys:eDescription,  NSLocalizedDescriptionKey, nil];
         error = [NSError errorWithDomain:errorDomain code:eCode userInfo:eDict];
         if (responseBlock)
             responseBlock (nil, error);
@@ -134,17 +135,15 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
     if (useToken){
         NSString *aToken;
         NSError *anError = nil;
-        aToken = [[AccountManager sharedAccountManager] token: &anError];
+        aToken = [_accountManager token: &anError];
         if (anError){
             responseBlock(nil, anError);
-            [requestParameters release];
             return nil;
         }
         [requestParameters setObject:aToken forKey:@"token"];
     }
     
     NSURLRequest *request = [self getRequestWithPath:urlPath parameters: requestParameters];
-    [requestParameters release];
     
     DDLogRequest(@">>>> %@", request.URL);
     
@@ -193,7 +192,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
             responseBlock(nil, error);
     }];
     [requestOperation start];
-    return [requestOperation autorelease];
+    return requestOperation ;
 }
 
 - (AFHTTPRequestOperation*)makePOSTRequestForURLPath: (NSString *)urlPath useToken: (BOOL)useToken HTTPBody: (NSData*)body responseBlock:(void (^)(id, NSError *))responseBlock
@@ -202,7 +201,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
     if (useToken){
         NSString *aToken;
         NSError *anError = nil;
-        aToken = [[AccountManager sharedAccountManager] token: &anError];
+        aToken = [_accountManager token: &anError];
         if (anError){
             responseBlock(nil, anError);
             return nil;
@@ -214,7 +213,6 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
     
     NSString *bodyString = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
     DDLogRequest(@">>>> %@\nbody:\n%@", request.URL, bodyString);
-    [bodyString release];
     
     // This part of code takes a name of funcion/method where was called current method.
     // If this method has been called from another method of ServerInteracionManager, NSInvocation (see part B) will be created.
@@ -261,7 +259,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
             responseBlock(nil, error);
     }];
     [requestOperation start];
-    return [requestOperation autorelease];
+    return requestOperation ;
 }
 
 
@@ -269,72 +267,72 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
 #pragma mark - Public methods
 #pragma mark Accont services
 
-- (NSOperation *)createAccountForUser:(MWEntity<MWJSONData> *)inputObject storeId:(NSString*)storeId responseBlock:(void (^)(NSDictionary *, NSError *))responseBlock
-{
-    NSString *urlPath = [NSString stringWithFormat:@"%@/%@",  kPOSTCreateAccountURLPath, storeId];
-    
-    return [self makePOSTRequestForURLPath:urlPath
-                                  useToken:NO
-                                  HTTPBody:[inputObject JSONData]
-                             responseBlock:responseBlock];
-}
-
-- (NSDictionary *)synchronousLogin:(MWEntity<MWJSONData> *)login error:(NSError **)error
-{
-    NSString *urlString = [kServerURL stringByAppendingPathComponent: kPOSTUserLoginURLPath];
-    DDLogInfo(@"Start synchronous login");
-    NSData *jsonData = [login JSONData];
-    NSString *bodyString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    NSURLRequest *request = [self postRequestWithPath:urlString httpBody:jsonData];
-    
-//    [NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:request.URL.host];
-    
-    NSURLResponse* response;
-    //Capturing server response
-    DDLogRequest(@">>>> %@\nbody:\n%@", request.URL, bodyString);
-    NSData* responseData = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:error];
-    if (*error){
-        DDLogError(@"%s\nERROR: %@", __PRETTY_FUNCTION__, *error);
-        return nil;
-    }
-    else{
-        DDLogInfo(@"Success synchronous login");
-       
-        NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-        DDLogResponseOk(@"<<<< %@\n\n%@",request.URL, responseStr);
-        [responseStr release];
-       
-        NSDictionary *responseDict = [[JSONDecoder decoder] objectWithData:responseData error: error];
-        if (*error){
-            return nil;
-        }
-        NSString *status = [responseDict objectForKey:kResponseStatusKey];
-        if ([status isEqualToString: kResponseStatusError]){
-            NSString *eDescription = [responseDict valueForKeyPath:kResponseErrorMessagePath];
-            int eCode = [[responseDict valueForKeyPath:kResponseErrorCodePath] intValue];
-            NSDictionary *eDict = [NSDictionary dictionaryWithObjectsAndKeys:eDescription,  NSLocalizedDescriptionKey, kErrorTitle, kErrorTitleKey, nil];
-            *error = [NSError errorWithDomain:@"ServerInteractionManager" code:eCode userInfo:eDict];
-            return nil;
-        }
-        id responseObject = [responseDict objectForKey:kResponseTargetObjectKey];
-        if (responseObject && ![responseObject isKindOfClass: [NSNull class]]){
-            *error = nil;
-            return responseObject;
-        }
-    }
-    *error = nil;
-    return nil;
-}
-
-- (NSOperation *)userLogin:(MWEntity<MWJSONData> *)inputObject responseBlock:(void (^)(NSDictionary *, NSError *))responseBlock
-{
-    
-    return [self makePOSTRequestForURLPath:kPOSTUserLoginURLPath
-                                  useToken:NO
-                                  HTTPBody:[inputObject JSONData]
-                             responseBlock:responseBlock];
-    
-}
+//- (NSOperation *)createAccountForUser:(MWEntity*)inputObject storeId:(NSString*)storeId responseBlock:(void (^)(NSDictionary *, NSError *))responseBlock
+//{
+//    NSString *urlPath = [NSString stringWithFormat:@"%@/%@",  kPOSTCreateAccountURLPath, storeId];
+//    
+//    return [self makePOSTRequestForURLPath:urlPath
+//                                  useToken:NO
+//                                  HTTPBody:[inputObject JSONData]
+//                             responseBlock:responseBlock];
+//}
+//
+//- (NSDictionary *)synchronousLogin:(MWEntity*)login error:(NSError **)error
+//{
+//    NSString *urlString = [kServerURL stringByAppendingPathComponent: kPOSTUserLoginURLPath];
+//    DDLogInfo(@"Start synchronous login");
+//    NSData *jsonData = [login JSONData];
+//    NSString *bodyString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//    NSURLRequest *request = [self postRequestWithPath:urlString httpBody:jsonData];
+//    
+////    [NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:request.URL.host];
+//    
+//    NSURLResponse* response;
+//    //Capturing server response
+//    DDLogRequest(@">>>> %@\nbody:\n%@", request.URL, bodyString);
+//    NSData* responseData = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:error];
+//    if (*error){
+//        DDLogError(@"%s\nERROR: %@", __PRETTY_FUNCTION__, *error);
+//        return nil;
+//    }
+//    else{
+//        DDLogInfo(@"Success synchronous login");
+//       
+//        NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+//        DDLogResponseOk(@"<<<< %@\n\n%@",request.URL, responseStr);
+//        [responseStr release];
+//       
+//        NSDictionary *responseDict = [[JSONDecoder decoder] objectWithData:responseData error: error];
+//        if (*error){
+//            return nil;
+//        }
+//        NSString *status = [responseDict objectForKey:kResponseStatusKey];
+//        if ([status isEqualToString: kResponseStatusError]){
+//            NSString *eDescription = [responseDict valueForKeyPath:kResponseErrorMessagePath];
+//            int eCode = [[responseDict valueForKeyPath:kResponseErrorCodePath] intValue];
+//            NSDictionary *eDict = [NSDictionary dictionaryWithObjectsAndKeys:eDescription,  NSLocalizedDescriptionKey, kErrorTitle, kErrorTitleKey, nil];
+//            *error = [NSError errorWithDomain:@"ServerInteractionManager" code:eCode userInfo:eDict];
+//            return nil;
+//        }
+//        id responseObject = [responseDict objectForKey:kResponseTargetObjectKey];
+//        if (responseObject && ![responseObject isKindOfClass: [NSNull class]]){
+//            *error = nil;
+//            return responseObject;
+//        }
+//    }
+//    *error = nil;
+//    return nil;
+//}
+//
+//- (NSOperation *)userLogin:(MWEntity<MWJSONData> *)inputObject responseBlock:(void (^)(NSDictionary *, NSError *))responseBlock
+//{
+//    
+//    return [self makePOSTRequestForURLPath:kPOSTUserLoginURLPath
+//                                  useToken:NO
+//                                  HTTPBody:[inputObject JSONData]
+//                             responseBlock:responseBlock];
+//    
+//}
 
 
 @end

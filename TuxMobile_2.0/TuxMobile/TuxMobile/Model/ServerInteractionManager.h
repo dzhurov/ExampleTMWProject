@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "CWLSynthesizeSingleton.h"
 #import "APIConsts.h"
+#import "MWAccountManager.h"
+#import "MWEntity.h"
 
 typedef void(^ResponseBlock)(id responseObject, NSError *error);
 
@@ -24,6 +26,8 @@ typedef void(^ResponseBlock)(id responseObject, NSError *error);
 #endif
     AFHTTPClient *_httpClient;
 }
+
+@property (nonatomic, weak) id <MWAccountManager> accountManager;
 
 CWL_DECLARE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, sharedManager);
 

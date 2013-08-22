@@ -9,6 +9,7 @@
 #import "MWEntity.h"
 #import <objc/runtime.h>
 #import "NSDateFormatter+MWFormats.h"
+#import "JSONKit.h"
 
 @implementation MWEntity
 

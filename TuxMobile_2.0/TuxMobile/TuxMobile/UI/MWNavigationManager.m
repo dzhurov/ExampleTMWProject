@@ -12,12 +12,6 @@
 
 @property (nonatomic, retain) NSString *currentGarmentId;
 
-- (void)barcodeDidScan:(NSNotification*)notification;
-- (void)qrCodeDidScan:(NSNotification*)notification;
-- (void)userSighnOffAutomatically: (NSNotification*)notification;
-- (void)sledScannerDidConnect: (NSNotification*)notification;
-- (void)sledScannerDidDisconnect: (NSNotification*)notification;
-- (void)sledFreezed:(NSNotification*)notification;
 @end
 
 @implementation MWNavigationManager
