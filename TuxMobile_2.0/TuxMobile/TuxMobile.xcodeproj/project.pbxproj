@@ -35,6 +35,7 @@
 		7E2ECBA517C63BC200D68C69 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB9B17C63BC200D68C69 /* NSInvocation+EXT.m */; };
 		7E2ECBA617C63BC200D68C69 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB9D17C63BC200D68C69 /* NSMethodSignature+EXT.m */; };
 		7E2ECBAC17C64D3100D68C69 /* NSDictionary+NullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */; };
+		7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBD117C6505600D68C69 /* AccountManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,8 @@
 		7E2ECBA917C646B000D68C69 /* MWAccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWAccountManager.h; sourceTree = "<group>"; };
 		7E2ECBAA17C64D3100D68C69 /* NSDictionary+NullValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NullValue.h"; sourceTree = "<group>"; };
 		7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NullValue.m"; sourceTree = "<group>"; };
+		7E2ECBD017C6505500D68C69 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
+		7E2ECBD117C6505600D68C69 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		F4D37240C1264B1FAD2FFFAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -187,6 +190,8 @@
 				7E2ECB7F17C6315A00D68C69 /* Utilities.m */,
 				7E2ECB7D17C62F8C00D68C69 /* APIConsts.h */,
 				7E2ECBA917C646B000D68C69 /* MWAccountManager.h */,
+				7E2ECBD017C6505500D68C69 /* AccountManager.h */,
+				7E2ECBD117C6505600D68C69 /* AccountManager.m */,
 				7E2ECB8117C631F100D68C69 /* ServerInteractionManager.h */,
 				7E2ECB8217C631F100D68C69 /* ServerInteractionManager.m */,
 				7E2ECB6717C6290D00D68C69 /* Entities */,
@@ -426,6 +431,7 @@
 				7E2ECBA517C63BC200D68C69 /* NSInvocation+EXT.m in Sources */,
 				7E2ECBA617C63BC200D68C69 /* NSMethodSignature+EXT.m in Sources */,
 				7E2ECBAC17C64D3100D68C69 /* NSDictionary+NullValue.m in Sources */,
+				7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
