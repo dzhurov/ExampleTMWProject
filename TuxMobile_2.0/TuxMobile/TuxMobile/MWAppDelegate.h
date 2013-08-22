@@ -1,0 +1,19 @@
+//
+//  MWAppDelegate.h
+//  TuxMobile
+//
+//  Created by DZhurov on 8/22/13.
+//  Copyright (c) 2013 The Men's Wearhouse. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class MWViewController;
+
+@interface MWAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) MWViewController *viewController;
+
+@end
