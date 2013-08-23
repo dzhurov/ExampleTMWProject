@@ -8,7 +8,6 @@
 
 #import "AccountManager.h"
 #import "ServerInteractionManager.h"
-#import "MWStoreManager.h"
 #import "Notifications.h"
 
 #define kLoginKey           @"loginKey"
@@ -41,7 +40,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSData *user = [defaults objectForKey:kEncodedUserKey];
         self.user = (MWUser *)[NSKeyedUnarchiver unarchiveObjectWithData: user];
-        _token = [[[NSUserDefaults standardUserDefaults] objectForKey:kTokenKey] retain];
+        _token = [[NSUserDefaults standardUserDefaults] objectForKey:kTokenKey] ;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(applicationDidEnterBackground:)

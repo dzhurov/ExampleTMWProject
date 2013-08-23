@@ -26,6 +26,12 @@
 @interface MWEntity (MWEntity)
 - (id)initWithJSONDictionary:(NSDictionary*)jsonDictionary;
 + (NSMutableArray*)objectsWithJSONArray:(NSArray*)array;
+
+/*
+ Returns Class of members in collection (NSArray, NSMutableArray) for "field" key. Return Nil to save original elements structure.
+ */
+- (Class)classOfMembersInCollection:(NSString*)field;
+
 @end
 
 

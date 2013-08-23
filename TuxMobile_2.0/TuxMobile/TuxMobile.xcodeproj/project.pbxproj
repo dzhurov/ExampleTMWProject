@@ -36,6 +36,7 @@
 		7E2ECBA617C63BC200D68C69 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB9D17C63BC200D68C69 /* NSMethodSignature+EXT.m */; };
 		7E2ECBAC17C64D3100D68C69 /* NSDictionary+NullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */; };
 		7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBD117C6505600D68C69 /* AccountManager.m */; };
+		7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,8 @@
 		7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NullValue.m"; sourceTree = "<group>"; };
 		7E2ECBD017C6505500D68C69 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		7E2ECBD117C6505600D68C69 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		7E9A1A5F17C764D8005D31F4 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
+		7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
 		F4D37240C1264B1FAD2FFFAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -241,6 +244,8 @@
 		7E2ECB6B17C6290D00D68C69 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				7E9A1A5F17C764D8005D31F4 /* UIAlertView+Block.h */,
+				7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				7E2ECBA617C63BC200D68C69 /* NSMethodSignature+EXT.m in Sources */,
 				7E2ECBAC17C64D3100D68C69 /* NSDictionary+NullValue.m in Sources */,
 				7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */,
+				7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

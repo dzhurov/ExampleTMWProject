@@ -270,4 +270,10 @@
     return nil;
 }
 
+- (Class)classOfMembersInCollection:(NSString*)field
+{
+    return Nil;
+}
+
+
 @end
