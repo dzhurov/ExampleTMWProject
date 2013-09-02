@@ -21,7 +21,6 @@
 		7E2ECB6017C627C500D68C69 /* MWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E2ECB5E17C627C500D68C69 /* MWViewController.xib */; };
 		7E2ECB6F17C6293B00D68C69 /* MWNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB6E17C6293B00D68C69 /* MWNavigationManager.m */; };
 		7E2ECB7617C62E5400D68C69 /* MWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB7517C62E5400D68C69 /* MWBaseViewController.m */; };
-		7E2ECB7917C62E7100D68C69 /* MWEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB7817C62E7100D68C69 /* MWEntity.m */; };
 		7E2ECB7C17C62EBC00D68C69 /* NSDateFormatter+MWFormats.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB7B17C62EBC00D68C69 /* NSDateFormatter+MWFormats.m */; };
 		7E2ECB8017C6315A00D68C69 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB7F17C6315A00D68C69 /* Utilities.m */; };
 		7E2ECB8317C631F100D68C69 /* ServerInteractionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB8217C631F100D68C69 /* ServerInteractionManager.m */; };
@@ -36,6 +35,7 @@
 		7E2ECBA617C63BC200D68C69 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB9D17C63BC200D68C69 /* NSMethodSignature+EXT.m */; };
 		7E2ECBAC17C64D3100D68C69 /* NSDictionary+NullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */; };
 		7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBD117C6505600D68C69 /* AccountManager.m */; };
+		7E3A84C217D4A78D0021F3F0 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A84C117D4A78D0021F3F0 /* UncaughtExceptionHandler.m */; };
 		7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +64,6 @@
 		7E2ECB7217C62DDA00D68C69 /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		7E2ECB7417C62E5400D68C69 /* MWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBaseViewController.h; sourceTree = "<group>"; };
 		7E2ECB7517C62E5400D68C69 /* MWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWBaseViewController.m; sourceTree = "<group>"; };
-		7E2ECB7717C62E7100D68C69 /* MWEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWEntity.h; sourceTree = "<group>"; };
-		7E2ECB7817C62E7100D68C69 /* MWEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWEntity.m; sourceTree = "<group>"; };
 		7E2ECB7A17C62EBC00D68C69 /* NSDateFormatter+MWFormats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+MWFormats.h"; sourceTree = "<group>"; };
 		7E2ECB7B17C62EBC00D68C69 /* NSDateFormatter+MWFormats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+MWFormats.m"; sourceTree = "<group>"; };
 		7E2ECB7D17C62F8C00D68C69 /* APIConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConsts.h; sourceTree = "<group>"; };
@@ -103,6 +101,10 @@
 		7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NullValue.m"; sourceTree = "<group>"; };
 		7E2ECBD017C6505500D68C69 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		7E2ECBD117C6505600D68C69 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		7E3A84B917D4875C0021F3F0 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		7E3A84BA17D4875C0021F3F0 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		7E3A84C017D4A78D0021F3F0 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		7E3A84C117D4A78D0021F3F0 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		7E9A1A5F17C764D8005D31F4 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
 		F4D37240C1264B1FAD2FFFAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -182,6 +184,7 @@
 		7E2ECB6617C6290D00D68C69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E3A84BF17D4A76C0021F3F0 /* ExceptionHandler */,
 				7E2ECB7217C62DDA00D68C69 /* Notifications.h */,
 				7E2ECB7017C6299D00D68C69 /* CWLSynthesizeSingleton.h */,
 				7E2ECB8417C6377C00D68C69 /* MWLogsExtension.h */,
@@ -197,18 +200,9 @@
 				7E2ECBD117C6505600D68C69 /* AccountManager.m */,
 				7E2ECB8117C631F100D68C69 /* ServerInteractionManager.h */,
 				7E2ECB8217C631F100D68C69 /* ServerInteractionManager.m */,
-				7E2ECB6717C6290D00D68C69 /* Entities */,
+				7E3A84B317D47BFD0021F3F0 /* Enitites */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		7E2ECB6717C6290D00D68C69 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				7E2ECB7717C62E7100D68C69 /* MWEntity.h */,
-				7E2ECB7817C62E7100D68C69 /* MWEntity.m */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		7E2ECB6817C6290D00D68C69 /* ThirdParty */ = {
@@ -313,6 +307,32 @@
 				7E2ECB9D17C63BC200D68C69 /* NSMethodSignature+EXT.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7E3A84B317D47BFD0021F3F0 /* Enitites */ = {
+			isa = PBXGroup;
+			children = (
+				7E3A84B917D4875C0021F3F0 /* BaseEntity.h */,
+				7E3A84BA17D4875C0021F3F0 /* BaseEntity.m */,
+				7E3A84B617D47BFD0021F3F0 /* machine */,
+			);
+			path = Enitites;
+			sourceTree = "<group>";
+		};
+		7E3A84B617D47BFD0021F3F0 /* machine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = machine;
+			sourceTree = "<group>";
+		};
+		7E3A84BF17D4A76C0021F3F0 /* ExceptionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				7E3A84C017D4A78D0021F3F0 /* UncaughtExceptionHandler.h */,
+				7E3A84C117D4A78D0021F3F0 /* UncaughtExceptionHandler.m */,
+			);
+			name = ExceptionHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,7 +442,6 @@
 				7E2ECB5D17C627C500D68C69 /* MWViewController.m in Sources */,
 				7E2ECB6F17C6293B00D68C69 /* MWNavigationManager.m in Sources */,
 				7E2ECB7617C62E5400D68C69 /* MWBaseViewController.m in Sources */,
-				7E2ECB7917C62E7100D68C69 /* MWEntity.m in Sources */,
 				7E2ECB7C17C62EBC00D68C69 /* NSDateFormatter+MWFormats.m in Sources */,
 				7E2ECB8017C6315A00D68C69 /* Utilities.m in Sources */,
 				7E2ECB8317C631F100D68C69 /* ServerInteractionManager.m in Sources */,
@@ -438,6 +457,7 @@
 				7E2ECBAC17C64D3100D68C69 /* NSDictionary+NullValue.m in Sources */,
 				7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */,
 				7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */,
+				7E3A84C217D4A78D0021F3F0 /* UncaughtExceptionHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

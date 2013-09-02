@@ -17,11 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[MWNavigationManager sharedNavigationManager] showFirstViewController];
-    NSString *lol = @keypath( ((MWAppDelegate*)nil), viewController);
-    NSLog(@"%@", lol);
     return YES;
-    
-    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

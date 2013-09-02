@@ -10,7 +10,6 @@
 #import "CWLSynthesizeSingleton.h"
 #import "APIConsts.h"
 #import "MWAccountManager.h"
-#import "MWEntity.h"
 
 typedef void(^ResponseBlock)(id responseObject, NSError *error);
 

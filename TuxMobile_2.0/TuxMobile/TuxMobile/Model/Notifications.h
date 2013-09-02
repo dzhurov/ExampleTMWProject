@@ -17,10 +17,4 @@
 #define kScannerDataKey                         @"ScannerDataKey"
 #define kScannerDataType                        @"ScannerDataType"
 
-#define kNotificationOrderListDidUpdated        @"NotificationOrderListDidUpdated"
-#define kNotificationSighnOffAutomatically      @"NotificationSighnOffAutomatically"
-
-#define kNotificationGarmentStatusDidChanged    @"GarmentStatusDidChanged"
-#define kGarmentIdKey                           @"GarmentId"
-
 #endif
