@@ -72,6 +72,7 @@
 		BB9838F417D6345F00157E01 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB9838EE17D6345F00157E01 /* Gotham-Book.otf */; };
 		BB9838F517D6345F00157E01 /* Gotham-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB9838EF17D6345F00157E01 /* Gotham-BookItalic.otf */; };
 		BB9838F617D6345F00157E01 /* Gotham-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB9838F017D6345F00157E01 /* Gotham-Thin.otf */; };
+		BB9838FB17D63EB300157E01 /* MWDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9838FA17D63EB300157E01 /* MWDefaultCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +192,8 @@
 		BB9838EE17D6345F00157E01 /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
 		BB9838EF17D6345F00157E01 /* Gotham-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-BookItalic.otf"; sourceTree = "<group>"; };
 		BB9838F017D6345F00157E01 /* Gotham-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Thin.otf"; sourceTree = "<group>"; };
+		BB9838F917D63EB300157E01 /* MWDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDefaultCell.h; sourceTree = "<group>"; };
+		BB9838FA17D63EB300157E01 /* MWDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDefaultCell.m; sourceTree = "<group>"; };
 		F4D37240C1264B1FAD2FFFAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -374,6 +377,8 @@
 		7E2ECB6A17C6290D00D68C69 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				BB9838F917D63EB300157E01 /* MWDefaultCell.h */,
+				BB9838FA17D63EB300157E01 /* MWDefaultCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				BB7F76EC17D629EA00EF456E /* MWDefaultTheme.m in Sources */,
 				7E8F4FC617D6233400EC3131 /* IQKeyBoardManager.m in Sources */,
 				7E8F4FC717D6233400EC3131 /* IQSegmentedNextPrevious.m in Sources */,
+				BB9838FB17D63EB300157E01 /* MWDefaultCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
