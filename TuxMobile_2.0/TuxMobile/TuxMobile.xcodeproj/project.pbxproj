@@ -61,6 +61,8 @@
 		7E8F4FBE17D6054E00EC3131 /* _Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FB717D6054E00EC3131 /* _Role.m */; };
 		7E8F4FBF17D6054E00EC3131 /* _Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FB917D6054E00EC3131 /* _Store.m */; };
 		7E8F4FC017D6054E00EC3131 /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FBB17D6054E00EC3131 /* _User.m */; };
+		7E8F4FC617D6233400EC3131 /* IQKeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FC317D6233400EC3131 /* IQKeyBoardManager.m */; };
+		7E8F4FC717D6233400EC3131 /* IQSegmentedNextPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FC517D6233400EC3131 /* IQSegmentedNextPrevious.m */; };
 		7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
@@ -165,6 +167,10 @@
 		7E8F4FB917D6054E00EC3131 /* _Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Store.m; sourceTree = "<group>"; };
 		7E8F4FBA17D6054E00EC3131 /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _User.h; sourceTree = "<group>"; };
 		7E8F4FBB17D6054E00EC3131 /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _User.m; sourceTree = "<group>"; };
+		7E8F4FC217D6233400EC3131 /* IQKeyBoardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyBoardManager.h; sourceTree = "<group>"; };
+		7E8F4FC317D6233400EC3131 /* IQKeyBoardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyBoardManager.m; sourceTree = "<group>"; };
+		7E8F4FC417D6233400EC3131 /* IQSegmentedNextPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQSegmentedNextPrevious.h; sourceTree = "<group>"; };
+		7E8F4FC517D6233400EC3131 /* IQSegmentedNextPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQSegmentedNextPrevious.m; sourceTree = "<group>"; };
 		7E9A1A5F17C764D8005D31F4 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
 		F4D37240C1264B1FAD2FFFAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -331,6 +337,7 @@
 		7E2ECB6817C6290D00D68C69 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				7E8F4FC117D6233400EC3131 /* IQKeyBoardManager */,
 				7E2ECB8517C63BC200D68C69 /* extobjc */,
 			);
 			path = ThirdParty;
@@ -488,6 +495,17 @@
 			path = machine;
 			sourceTree = "<group>";
 		};
+		7E8F4FC117D6233400EC3131 /* IQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				7E8F4FC217D6233400EC3131 /* IQKeyBoardManager.h */,
+				7E8F4FC317D6233400EC3131 /* IQKeyBoardManager.m */,
+				7E8F4FC417D6233400EC3131 /* IQSegmentedNextPrevious.h */,
+				7E8F4FC517D6233400EC3131 /* IQSegmentedNextPrevious.m */,
+			);
+			path = IQKeyBoardManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -634,6 +652,8 @@
 				7E8F4FBF17D6054E00EC3131 /* _Store.m in Sources */,
 				7E8F4FC017D6054E00EC3131 /* _User.m in Sources */,
 				1AA558DB17D60C0400ACE0E0 /* MWLoginViewController.m in Sources */,
+				7E8F4FC617D6233400EC3131 /* IQKeyBoardManager.m in Sources */,
+				7E8F4FC717D6233400EC3131 /* IQSegmentedNextPrevious.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
