@@ -237,12 +237,12 @@ __strong static NSDateFormatter const *dateFormatter = nil;
 
 - (NSMutableDictionary*)dictionaryInfo
 {
-    return [self dictionaryInfoForKeys:[BaseEntity mappedKays]];
+    return [self dictionaryInfoForKeys:[BaseEntity mappedKeys]];
 }
 
 - (void)setDictionaryInfo:(NSDictionary *)dictionaryInfo
 {
-    [self setDictionaryInfo:dictionaryInfo forKeys:[BaseEntity mappedKays]];
+    [self setDictionaryInfo:dictionaryInfo forKeys:[BaseEntity mappedKeys]];
 }
 
 #pragma mark - Setting/Get value for key
