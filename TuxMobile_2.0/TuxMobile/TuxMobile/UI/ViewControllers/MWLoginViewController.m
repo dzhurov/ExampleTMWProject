@@ -10,6 +10,8 @@
 
 @interface MWLoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
+
 @end
 
 @implementation MWLoginViewController
@@ -27,6 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [MWThemeManager customizeButton:self.signInButton];
 }
 
 - (void)didReceiveMemoryWarning

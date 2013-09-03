@@ -202,7 +202,23 @@
 
 - (UIImage *)buttonImageForState:(UIControlState)state
 {
-    return nil;
+    UIImage* image = nil;
+    
+    
+    switch (state) {
+        case UIControlStateNormal:
+            image = [[UIImage imageNamed:@"button_black_gradient.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 5.0f, 0.0f, 5.0f)];
+            break;
+        
+        case UIControlStateHighlighted:
+        case UIControlStateSelected:
+            image = [[UIImage imageNamed:@"button_black_gradient_selected.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 5.0f, 0.0f, 5.0f)];
+            break;
+        default:
+            break;
+    }
+    
+    return image;
 }
 
 @end

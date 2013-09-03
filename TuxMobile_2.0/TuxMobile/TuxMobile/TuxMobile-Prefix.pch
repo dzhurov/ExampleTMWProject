@@ -19,6 +19,7 @@
     #import "NSDateFormatter+MWFormats.h"
     #import <SystemConfiguration/SystemConfiguration.h>
     #import <MobileCoreServices/MobileCoreServices.h>
+    #import "MWTheme.h"
 
 #ifdef DEBUG
     static const int ddLogLevel = LOG_LEVEL_VERBOSE | LOG_FLAG_REQUEST | LOG_FLAG_RESPONSE_OK | LOG_FLAG_RESPONSE_ERROR | LOG_FLAG_SLED_INFO | LOG_FLAG_CRASH;

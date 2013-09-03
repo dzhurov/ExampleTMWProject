@@ -16,6 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MWThemeManager customizeAppAppearance];
+    
     [[MWNavigationManager sharedNavigationManager] showFirstViewController];
     return YES;
 }
