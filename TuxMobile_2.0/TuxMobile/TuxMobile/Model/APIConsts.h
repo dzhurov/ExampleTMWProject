@@ -10,7 +10,7 @@
 #define TuxMobile_APIConsts_h
 
 #define TEST_SERVER_URL                                   @"https://test.tmw.com:8443/"
-static NSString*  kServerURL = TEST_SERVER_URL;
+static NSString* const kServerURL = TEST_SERVER_URL;
 
 static NSString* const kPOSTLoginURLPath = @"auth/login";
 //static NSString* const k<#Method(GET/POST)#><#name#>URLPath = @"/<#path#>";
