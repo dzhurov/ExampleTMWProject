@@ -62,6 +62,8 @@
 		7E8F4FBF17D6054E00EC3131 /* _Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FB917D6054E00EC3131 /* _Store.m */; };
 		7E8F4FC017D6054E00EC3131 /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FBB17D6054E00EC3131 /* _User.m */; };
 		7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BB7F76E917D6280D00EF456E /* MWTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7F76E817D6280D00EF456E /* MWTheme.m */; };
+		BB7F76EC17D629EA00EF456E /* MWDefaultTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7F76EB17D629EA00EF456E /* MWDefaultTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,10 @@
 		7E8F4FBB17D6054E00EC3131 /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _User.m; sourceTree = "<group>"; };
 		7E9A1A5F17C764D8005D31F4 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
+		BB7F76E717D6280D00EF456E /* MWTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTheme.h; sourceTree = "<group>"; };
+		BB7F76E817D6280D00EF456E /* MWTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTheme.m; sourceTree = "<group>"; };
+		BB7F76EA17D629EA00EF456E /* MWDefaultTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWDefaultTheme.h; sourceTree = "<group>"; };
+		BB7F76EB17D629EA00EF456E /* MWDefaultTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWDefaultTheme.m; sourceTree = "<group>"; };
 		F4D37240C1264B1FAD2FFFAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -339,6 +345,7 @@
 		7E2ECB6917C6290D00D68C69 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BB7F76E617D627CA00EF456E /* Theme */,
 				7E2ECB6D17C6293B00D68C69 /* MWNavigationManager.h */,
 				7E2ECB6E17C6293B00D68C69 /* MWNavigationManager.m */,
 				7E2ECB7417C62E5400D68C69 /* MWBaseViewController.h */,
@@ -488,6 +495,17 @@
 			path = machine;
 			sourceTree = "<group>";
 		};
+		BB7F76E617D627CA00EF456E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				BB7F76E717D6280D00EF456E /* MWTheme.h */,
+				BB7F76E817D6280D00EF456E /* MWTheme.m */,
+				BB7F76EA17D629EA00EF456E /* MWDefaultTheme.h */,
+				BB7F76EB17D629EA00EF456E /* MWDefaultTheme.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -634,6 +652,8 @@
 				7E8F4FBF17D6054E00EC3131 /* _Store.m in Sources */,
 				7E8F4FC017D6054E00EC3131 /* _User.m in Sources */,
 				1AA558DB17D60C0400ACE0E0 /* MWLoginViewController.m in Sources */,
+				BB7F76E917D6280D00EF456E /* MWTheme.m in Sources */,
+				BB7F76EC17D629EA00EF456E /* MWDefaultTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

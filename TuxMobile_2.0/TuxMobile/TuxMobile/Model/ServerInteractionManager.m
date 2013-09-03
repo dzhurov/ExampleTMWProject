@@ -267,6 +267,18 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, share
 #pragma mark - Public methods
 #pragma mark Accont services
 
+- (NSDictionary*)synchronousLogin:(NSDictionary*)login error:(NSError**)error {
+    return [NSDictionary dictionary];
+}
+
+- (NSOperation*)userLogin:(NSDictionary*)login responseBlock:(void(^)(NSDictionary *loginResponse, NSError *error))responseBlock {
+    return nil;
+}
+
+- (NSOperation*)userLogoutResponseBlock:(void(^)(id _null, NSError *error))responseBlock {
+    return nil;
+}
+
 //- (NSOperation *)createAccountForUser:(MWEntity*)inputObject storeId:(NSString*)storeId responseBlock:(void (^)(NSDictionary *, NSError *))responseBlock
 //{
 //    NSString *urlPath = [NSString stringWithFormat:@"%@/%@",  kPOSTCreateAccountURLPath, storeId];
