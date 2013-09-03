@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B8089023A074BCD9E735351 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EE2F567C4D4856983B45F5 /* libPods.a */; };
+		1AA558B717D6061F00ACE0E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA558B617D6061F00ACE0E0 /* SystemConfiguration.framework */; };
+		1AA558B917D6062700ACE0E0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA558B817D6062700ACE0E0 /* MobileCoreServices.framework */; };
 		7E2ECB4417C627C500D68C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2ECB4317C627C500D68C69 /* UIKit.framework */; };
 		7E2ECB4617C627C500D68C69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2ECB4517C627C500D68C69 /* Foundation.framework */; };
 		7E2ECB4817C627C500D68C69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2ECB4717C627C500D68C69 /* CoreGraphics.framework */; };
@@ -17,8 +19,6 @@
 		7E2ECB5617C627C500D68C69 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E2ECB5517C627C500D68C69 /* Default.png */; };
 		7E2ECB5817C627C500D68C69 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E2ECB5717C627C500D68C69 /* Default@2x.png */; };
 		7E2ECB5A17C627C500D68C69 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E2ECB5917C627C500D68C69 /* Default-568h@2x.png */; };
-		7E2ECB5D17C627C500D68C69 /* MWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB5C17C627C500D68C69 /* MWViewController.m */; };
-		7E2ECB6017C627C500D68C69 /* MWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E2ECB5E17C627C500D68C69 /* MWViewController.xib */; };
 		7E2ECB6F17C6293B00D68C69 /* MWNavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB6E17C6293B00D68C69 /* MWNavigationManager.m */; };
 		7E2ECB7617C62E5400D68C69 /* MWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB7517C62E5400D68C69 /* MWBaseViewController.m */; };
 		7E2ECB7C17C62EBC00D68C69 /* NSDateFormatter+MWFormats.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB7B17C62EBC00D68C69 /* NSDateFormatter+MWFormats.m */; };
@@ -53,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AA558B617D6061F00ACE0E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1AA558B817D6062700ACE0E0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		76EE2F567C4D4856983B45F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2ECB4017C627C500D68C69 /* TuxMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuxMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2ECB4317C627C500D68C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -67,9 +69,6 @@
 		7E2ECB5517C627C500D68C69 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7E2ECB5717C627C500D68C69 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7E2ECB5917C627C500D68C69 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7E2ECB5B17C627C500D68C69 /* MWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MWViewController.h; path = ../../../MWViewController.h; sourceTree = "<group>"; };
-		7E2ECB5C17C627C500D68C69 /* MWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MWViewController.m; path = ../../../MWViewController.m; sourceTree = "<group>"; };
-		7E2ECB5F17C627C500D68C69 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MWViewController.xib; sourceTree = "<group>"; };
 		7E2ECB6D17C6293B00D68C69 /* MWNavigationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNavigationManager.h; sourceTree = "<group>"; };
 		7E2ECB6E17C6293B00D68C69 /* MWNavigationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNavigationManager.m; sourceTree = "<group>"; };
 		7E2ECB7017C6299D00D68C69 /* CWLSynthesizeSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWLSynthesizeSingleton.h; sourceTree = "<group>"; };
@@ -151,6 +150,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA558B917D6062700ACE0E0 /* MobileCoreServices.framework in Frameworks */,
+				1AA558B717D6061F00ACE0E0 /* SystemConfiguration.framework in Frameworks */,
 				7E2ECB4417C627C500D68C69 /* UIKit.framework in Frameworks */,
 				7E2ECB4617C627C500D68C69 /* Foundation.framework in Frameworks */,
 				7E2ECB4817C627C500D68C69 /* CoreGraphics.framework in Frameworks */,
@@ -182,6 +183,8 @@
 		7E2ECB4217C627C500D68C69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AA558B817D6062700ACE0E0 /* MobileCoreServices.framework */,
+				1AA558B617D6061F00ACE0E0 /* SystemConfiguration.framework */,
 				7E2ECB4317C627C500D68C69 /* UIKit.framework */,
 				7E2ECB4517C627C500D68C69 /* Foundation.framework */,
 				7E2ECB4717C627C500D68C69 /* CoreGraphics.framework */,
@@ -292,9 +295,6 @@
 		7E2ECB7317C62E1300D68C69 /* FirstController */ = {
 			isa = PBXGroup;
 			children = (
-				7E2ECB5B17C627C500D68C69 /* MWViewController.h */,
-				7E2ECB5C17C627C500D68C69 /* MWViewController.m */,
-				7E2ECB5E17C627C500D68C69 /* MWViewController.xib */,
 			);
 			path = FirstController;
 			sourceTree = "<group>";
@@ -460,7 +460,6 @@
 				7E2ECB5617C627C500D68C69 /* Default.png in Resources */,
 				7E2ECB5817C627C500D68C69 /* Default@2x.png in Resources */,
 				7E2ECB5A17C627C500D68C69 /* Default-568h@2x.png in Resources */,
-				7E2ECB6017C627C500D68C69 /* MWViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +505,6 @@
 			files = (
 				7E2ECB5017C627C500D68C69 /* main.m in Sources */,
 				7E2ECB5417C627C500D68C69 /* MWAppDelegate.m in Sources */,
-				7E2ECB5D17C627C500D68C69 /* MWViewController.m in Sources */,
 				7E2ECB6F17C6293B00D68C69 /* MWNavigationManager.m in Sources */,
 				7E2ECB7617C62E5400D68C69 /* MWBaseViewController.m in Sources */,
 				7E2ECB7C17C62EBC00D68C69 /* NSDateFormatter+MWFormats.m in Sources */,
@@ -550,15 +548,6 @@
 				7E2ECB4D17C627C500D68C69 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		7E2ECB5E17C627C500D68C69 /* MWViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E2ECB5F17C627C500D68C69 /* en */,
-			);
-			name = MWViewController.xib;
-			path = ../../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

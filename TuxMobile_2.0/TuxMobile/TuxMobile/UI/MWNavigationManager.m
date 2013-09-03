@@ -7,7 +7,6 @@
 //
 
 #import "MWNavigationManager.h"
-#import "MWViewController.h"
 @interface MWNavigationManager ()
 
 @property (nonatomic, retain) NSString *currentGarmentId;
@@ -41,7 +40,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(MWNavigationManager, sharedNavi
 
 - (void)showFirstViewController
 {
-    MWViewController* firstVC = [MWViewController new];
+    UIViewController* firstVC = [UIViewController new];
     self.window.rootViewController = firstVC;
     [self.window makeKeyAndVisible];
 }
