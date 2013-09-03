@@ -12,8 +12,5 @@
 
 @interface MWAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) MWViewController *viewController;
 
 @end

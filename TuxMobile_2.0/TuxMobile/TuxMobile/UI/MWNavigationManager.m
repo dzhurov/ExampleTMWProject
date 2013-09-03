@@ -8,6 +8,7 @@
 
 #import "MWNavigationManager.h"
 #import "MWLoginViewController.h"
+#import "IQKeyBoardManager.h"
 
 @interface MWNavigationManager ()
 
@@ -28,6 +29,8 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(MWNavigationManager, sharedNavi
     if (self) {
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
         [self.window makeKeyAndVisible];
+        [IQKeyBoardManager installKeyboardManager];
+        
     }
     return self;
 }
