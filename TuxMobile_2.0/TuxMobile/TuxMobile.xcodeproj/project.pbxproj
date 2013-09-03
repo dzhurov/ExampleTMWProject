@@ -10,6 +10,18 @@
 		0B8089023A074BCD9E735351 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EE2F567C4D4856983B45F5 /* libPods.a */; };
 		1AA558B717D6061F00ACE0E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA558B617D6061F00ACE0E0 /* SystemConfiguration.framework */; };
 		1AA558B917D6062700ACE0E0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA558B817D6062700ACE0E0 /* MobileCoreServices.framework */; };
+		1AA558C817D60B1D00ACE0E0 /* background_login_white_rect.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558C417D60B1D00ACE0E0 /* background_login_white_rect.png */; };
+		1AA558C917D60B1D00ACE0E0 /* background_login_white_rect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558C517D60B1D00ACE0E0 /* background_login_white_rect@2x.png */; };
+		1AA558CA17D60B1D00ACE0E0 /* background_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558C617D60B1D00ACE0E0 /* background_login.png */; };
+		1AA558CB17D60B1D00ACE0E0 /* background_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558C717D60B1D00ACE0E0 /* background_login@2x.png */; };
+		1AA558D017D60B4B00ACE0E0 /* button_black_gradient_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558CC17D60B4B00ACE0E0 /* button_black_gradient_selected.png */; };
+		1AA558D117D60B4B00ACE0E0 /* button_black_gradient_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558CD17D60B4B00ACE0E0 /* button_black_gradient_selected@2x.png */; };
+		1AA558D217D60B4B00ACE0E0 /* button_black_gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558CE17D60B4B00ACE0E0 /* button_black_gradient.png */; };
+		1AA558D317D60B4B00ACE0E0 /* button_black_gradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558CF17D60B4B00ACE0E0 /* button_black_gradient@2x.png */; };
+		1AA558D617D60B5A00ACE0E0 /* logo_tmw_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558D417D60B5A00ACE0E0 /* logo_tmw_white.png */; };
+		1AA558D717D60B5A00ACE0E0 /* logo_tmw_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558D517D60B5A00ACE0E0 /* logo_tmw_white@2x.png */; };
+		1AA558DB17D60C0400ACE0E0 /* MWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA558D917D60C0400ACE0E0 /* MWLoginViewController.m */; };
+		1AA558DC17D60C0400ACE0E0 /* MWLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA558DA17D60C0400ACE0E0 /* MWLoginViewController.xib */; };
 		7E2ECB4417C627C500D68C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2ECB4317C627C500D68C69 /* UIKit.framework */; };
 		7E2ECB4617C627C500D68C69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2ECB4517C627C500D68C69 /* Foundation.framework */; };
 		7E2ECB4817C627C500D68C69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2ECB4717C627C500D68C69 /* CoreGraphics.framework */; };
@@ -55,6 +67,19 @@
 /* Begin PBXFileReference section */
 		1AA558B617D6061F00ACE0E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1AA558B817D6062700ACE0E0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1AA558C417D60B1D00ACE0E0 /* background_login_white_rect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_login_white_rect.png; sourceTree = "<group>"; };
+		1AA558C517D60B1D00ACE0E0 /* background_login_white_rect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_login_white_rect@2x.png"; sourceTree = "<group>"; };
+		1AA558C617D60B1D00ACE0E0 /* background_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_login.png; sourceTree = "<group>"; };
+		1AA558C717D60B1D00ACE0E0 /* background_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_login@2x.png"; sourceTree = "<group>"; };
+		1AA558CC17D60B4B00ACE0E0 /* button_black_gradient_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_black_gradient_selected.png; sourceTree = "<group>"; };
+		1AA558CD17D60B4B00ACE0E0 /* button_black_gradient_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_black_gradient_selected@2x.png"; sourceTree = "<group>"; };
+		1AA558CE17D60B4B00ACE0E0 /* button_black_gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_black_gradient.png; sourceTree = "<group>"; };
+		1AA558CF17D60B4B00ACE0E0 /* button_black_gradient@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_black_gradient@2x.png"; sourceTree = "<group>"; };
+		1AA558D417D60B5A00ACE0E0 /* logo_tmw_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_tmw_white.png; sourceTree = "<group>"; };
+		1AA558D517D60B5A00ACE0E0 /* logo_tmw_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_tmw_white@2x.png"; sourceTree = "<group>"; };
+		1AA558D817D60C0400ACE0E0 /* MWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLoginViewController.h; sourceTree = "<group>"; };
+		1AA558D917D60C0400ACE0E0 /* MWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLoginViewController.m; sourceTree = "<group>"; };
+		1AA558DA17D60C0400ACE0E0 /* MWLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWLoginViewController.xib; sourceTree = "<group>"; };
 		76EE2F567C4D4856983B45F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2ECB4017C627C500D68C69 /* TuxMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuxMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2ECB4317C627C500D68C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -162,6 +187,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AA558BF17D609BC00ACE0E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AA558C017D609BC00ACE0E0 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AA558C017D609BC00ACE0E0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1AA558C317D60AFE00ACE0E0 /* Button */,
+				1AA558C217D60AF500ACE0E0 /* Logo */,
+				1AA558C117D60AEB00ACE0E0 /* Background */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		1AA558C117D60AEB00ACE0E0 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				1AA558C417D60B1D00ACE0E0 /* background_login_white_rect.png */,
+				1AA558C517D60B1D00ACE0E0 /* background_login_white_rect@2x.png */,
+				1AA558C617D60B1D00ACE0E0 /* background_login.png */,
+				1AA558C717D60B1D00ACE0E0 /* background_login@2x.png */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		1AA558C217D60AF500ACE0E0 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				1AA558D417D60B5A00ACE0E0 /* logo_tmw_white.png */,
+				1AA558D517D60B5A00ACE0E0 /* logo_tmw_white@2x.png */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		1AA558C317D60AFE00ACE0E0 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				1AA558CC17D60B4B00ACE0E0 /* button_black_gradient_selected.png */,
+				1AA558CD17D60B4B00ACE0E0 /* button_black_gradient_selected@2x.png */,
+				1AA558CE17D60B4B00ACE0E0 /* button_black_gradient.png */,
+				1AA558CF17D60B4B00ACE0E0 /* button_black_gradient@2x.png */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		1AA558DF17D61AF400ACE0E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		7E2ECB3717C627C500D68C69 = {
 			isa = PBXGroup;
 			children = (
@@ -196,11 +277,13 @@
 		7E2ECB4917C627C500D68C69 /* TuxMobile */ = {
 			isa = PBXGroup;
 			children = (
+				1AA558DF17D61AF400ACE0E0 /* Utils */,
 				7E2ECB5217C627C500D68C69 /* MWAppDelegate.h */,
 				7E2ECB5317C627C500D68C69 /* MWAppDelegate.m */,
 				7E2ECB6617C6290D00D68C69 /* Model */,
 				7E2ECB6817C6290D00D68C69 /* ThirdParty */,
 				7E2ECB6917C6290D00D68C69 /* UI */,
+				1AA558BF17D609BC00ACE0E0 /* Resources */,
 				7E2ECB4A17C627C500D68C69 /* Supporting Files */,
 			);
 			path = TuxMobile;
@@ -288,6 +371,9 @@
 			isa = PBXGroup;
 			children = (
 				7E2ECB7317C62E1300D68C69 /* FirstController */,
+				1AA558D817D60C0400ACE0E0 /* MWLoginViewController.h */,
+				1AA558D917D60C0400ACE0E0 /* MWLoginViewController.m */,
+				1AA558DA17D60C0400ACE0E0 /* MWLoginViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -460,6 +546,17 @@
 				7E2ECB5617C627C500D68C69 /* Default.png in Resources */,
 				7E2ECB5817C627C500D68C69 /* Default@2x.png in Resources */,
 				7E2ECB5A17C627C500D68C69 /* Default-568h@2x.png in Resources */,
+				1AA558C817D60B1D00ACE0E0 /* background_login_white_rect.png in Resources */,
+				1AA558C917D60B1D00ACE0E0 /* background_login_white_rect@2x.png in Resources */,
+				1AA558CA17D60B1D00ACE0E0 /* background_login.png in Resources */,
+				1AA558CB17D60B1D00ACE0E0 /* background_login@2x.png in Resources */,
+				1AA558D017D60B4B00ACE0E0 /* button_black_gradient_selected.png in Resources */,
+				1AA558D117D60B4B00ACE0E0 /* button_black_gradient_selected@2x.png in Resources */,
+				1AA558D217D60B4B00ACE0E0 /* button_black_gradient.png in Resources */,
+				1AA558D317D60B4B00ACE0E0 /* button_black_gradient@2x.png in Resources */,
+				1AA558D617D60B5A00ACE0E0 /* logo_tmw_white.png in Resources */,
+				1AA558D717D60B5A00ACE0E0 /* logo_tmw_white@2x.png in Resources */,
+				1AA558DC17D60C0400ACE0E0 /* MWLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +633,7 @@
 				7E8F4FBE17D6054E00EC3131 /* _Role.m in Sources */,
 				7E8F4FBF17D6054E00EC3131 /* _Store.m in Sources */,
 				7E8F4FC017D6054E00EC3131 /* _User.m in Sources */,
+				1AA558DB17D60C0400ACE0E0 /* MWLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
