@@ -31,8 +31,12 @@ typedef void(^ResponseBlock)(id responseObject, NSError *error);
 CWL_DECLARE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(ServerInteractionManager, sharedManager);
 
 // Account management
+- (NSDictionary*)synchronousLogin:(NSDictionary*)login error:(NSError**)error;
+- (NSOperation*)userLogin:(NSDictionary*)login responseBlock:(void(^)(NSDictionary *loginResponse, NSError *error))responseBlock;
+- (NSOperation*)userLogoutResponseBlock:(void(^)(id _null, NSError *error))responseBlock;
 
 // Orders
+
 
 //
 - (NSURLRequest *)postRequestWithPath:(NSString *)urlString httpBody:(NSData *)data;

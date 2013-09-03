@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "CWLSynthesizeSingleton.h"
 #import "MWAccountManager.h"
+#import "User.h"
 
 static const NSTimeInterval kTimeIntervalForAutomaticLogout = (30.f * 60.f); //sec
-
-@class MWUser;
 
 @interface AccountManager : NSObject <MWAccountManager>
 {
@@ -22,7 +21,7 @@ static const NSTimeInterval kTimeIntervalForAutomaticLogout = (30.f * 60.f); //s
 }
 
 @property (nonatomic, readonly) NSDate *expirationDate;
-@property (nonatomic, retain) MWUser *user;
+@property (nonatomic, retain) User *user;
 
 CWL_DECLARE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountManager);
 

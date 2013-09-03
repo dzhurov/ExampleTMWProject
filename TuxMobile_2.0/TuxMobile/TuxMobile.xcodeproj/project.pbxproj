@@ -35,8 +35,20 @@
 		7E2ECBA617C63BC200D68C69 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECB9D17C63BC200D68C69 /* NSMethodSignature+EXT.m */; };
 		7E2ECBAC17C64D3100D68C69 /* NSDictionary+NullValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */; };
 		7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2ECBD117C6505600D68C69 /* AccountManager.m */; };
-		7E3A84C217D4A78D0021F3F0 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A84C117D4A78D0021F3F0 /* UncaughtExceptionHandler.m */; };
-		7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */; };
+		7E3A84C217D4A78D0021F3F0 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A84C117D4A78D0021F3F0 /* UncaughtExceptionHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7E8F4F8A17D5E2CB00EC3131 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F8017D5E2CB00EC3131 /* BaseEntity.m */; };
+		7E8F4F8B17D5E2CB00EC3131 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F8217D5E2CB00EC3131 /* LoginRequest.m */; };
+		7E8F4F8C17D5E2CB00EC3131 /* LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F8417D5E2CB00EC3131 /* LoginResponse.m */; };
+		7E8F4F8D17D5E2CB00EC3131 /* _LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F8717D5E2CB00EC3131 /* _LoginRequest.m */; };
+		7E8F4F8E17D5E2CB00EC3131 /* _LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F8917D5E2CB00EC3131 /* _LoginResponse.m */; };
+		7E8F4F9117D5E2F200EC3131 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F9017D5E2F200EC3131 /* User.m */; };
+		7E8F4F9417D5E30700EC3131 /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F9317D5E30700EC3131 /* _User.m */; };
+		7E8F4F9A17D5E31C00EC3131 /* _Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F9817D5E31C00EC3131 /* _Store.m */; };
+		7E8F4F9F17D5E32C00EC3131 /* Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F9C17D5E32C00EC3131 /* Role.m */; };
+		7E8F4FA017D5E32C00EC3131 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4F9E17D5E32C00EC3131 /* Store.m */; };
+		7E8F4FA617D5E3B900EC3131 /* XSDEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FA517D5E3B800EC3131 /* XSDEnums.m */; };
+		7E8F4FAC17D5E50B00EC3131 /* _Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8F4FAB17D5E50B00EC3131 /* _Role.m */; };
+		7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,10 +113,32 @@
 		7E2ECBAB17C64D3100D68C69 /* NSDictionary+NullValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NullValue.m"; sourceTree = "<group>"; };
 		7E2ECBD017C6505500D68C69 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
 		7E2ECBD117C6505600D68C69 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
-		7E3A84B917D4875C0021F3F0 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
-		7E3A84BA17D4875C0021F3F0 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		7E3A84C017D4A78D0021F3F0 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		7E3A84C117D4A78D0021F3F0 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		7E8F4F7F17D5E2CB00EC3131 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		7E8F4F8017D5E2CB00EC3131 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		7E8F4F8117D5E2CB00EC3131 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		7E8F4F8217D5E2CB00EC3131 /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		7E8F4F8317D5E2CB00EC3131 /* LoginResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
+		7E8F4F8417D5E2CB00EC3131 /* LoginResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponse.m; sourceTree = "<group>"; };
+		7E8F4F8617D5E2CB00EC3131 /* _LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _LoginRequest.h; sourceTree = "<group>"; };
+		7E8F4F8717D5E2CB00EC3131 /* _LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _LoginRequest.m; sourceTree = "<group>"; };
+		7E8F4F8817D5E2CB00EC3131 /* _LoginResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _LoginResponse.h; sourceTree = "<group>"; };
+		7E8F4F8917D5E2CB00EC3131 /* _LoginResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _LoginResponse.m; sourceTree = "<group>"; };
+		7E8F4F8F17D5E2F200EC3131 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		7E8F4F9017D5E2F200EC3131 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		7E8F4F9217D5E30700EC3131 /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _User.h; sourceTree = "<group>"; };
+		7E8F4F9317D5E30700EC3131 /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _User.m; sourceTree = "<group>"; };
+		7E8F4F9717D5E31C00EC3131 /* _Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Store.h; sourceTree = "<group>"; };
+		7E8F4F9817D5E31C00EC3131 /* _Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Store.m; sourceTree = "<group>"; };
+		7E8F4F9B17D5E32C00EC3131 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Role.h; sourceTree = "<group>"; };
+		7E8F4F9C17D5E32C00EC3131 /* Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Role.m; sourceTree = "<group>"; };
+		7E8F4F9D17D5E32C00EC3131 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		7E8F4F9E17D5E32C00EC3131 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		7E8F4FA417D5E3B800EC3131 /* XSDEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDEnums.h; sourceTree = "<group>"; };
+		7E8F4FA517D5E3B800EC3131 /* XSDEnums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDEnums.m; sourceTree = "<group>"; };
+		7E8F4FAA17D5E50A00EC3131 /* _Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Role.h; sourceTree = "<group>"; };
+		7E8F4FAB17D5E50B00EC3131 /* _Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Role.m; sourceTree = "<group>"; };
 		7E9A1A5F17C764D8005D31F4 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
 		7E9A1A6017C764D8005D31F4 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
 		F4D37240C1264B1FAD2FFFAD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -200,7 +234,7 @@
 				7E2ECBD117C6505600D68C69 /* AccountManager.m */,
 				7E2ECB8117C631F100D68C69 /* ServerInteractionManager.h */,
 				7E2ECB8217C631F100D68C69 /* ServerInteractionManager.m */,
-				7E3A84B317D47BFD0021F3F0 /* Enitites */,
+				7E8F4F7E17D5E2CB00EC3131 /* Enitites */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,23 +343,6 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		7E3A84B317D47BFD0021F3F0 /* Enitites */ = {
-			isa = PBXGroup;
-			children = (
-				7E3A84B917D4875C0021F3F0 /* BaseEntity.h */,
-				7E3A84BA17D4875C0021F3F0 /* BaseEntity.m */,
-				7E3A84B617D47BFD0021F3F0 /* machine */,
-			);
-			path = Enitites;
-			sourceTree = "<group>";
-		};
-		7E3A84B617D47BFD0021F3F0 /* machine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = machine;
-			sourceTree = "<group>";
-		};
 		7E3A84BF17D4A76C0021F3F0 /* ExceptionHandler */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +350,45 @@
 				7E3A84C117D4A78D0021F3F0 /* UncaughtExceptionHandler.m */,
 			);
 			name = ExceptionHandler;
+			sourceTree = "<group>";
+		};
+		7E8F4F7E17D5E2CB00EC3131 /* Enitites */ = {
+			isa = PBXGroup;
+			children = (
+				7E8F4F7F17D5E2CB00EC3131 /* BaseEntity.h */,
+				7E8F4F8017D5E2CB00EC3131 /* BaseEntity.m */,
+				7E8F4FA417D5E3B800EC3131 /* XSDEnums.h */,
+				7E8F4FA517D5E3B800EC3131 /* XSDEnums.m */,
+				7E8F4F8117D5E2CB00EC3131 /* LoginRequest.h */,
+				7E8F4F8217D5E2CB00EC3131 /* LoginRequest.m */,
+				7E8F4F8317D5E2CB00EC3131 /* LoginResponse.h */,
+				7E8F4F8417D5E2CB00EC3131 /* LoginResponse.m */,
+				7E8F4F9B17D5E32C00EC3131 /* Role.h */,
+				7E8F4F9C17D5E32C00EC3131 /* Role.m */,
+				7E8F4F9D17D5E32C00EC3131 /* Store.h */,
+				7E8F4F9E17D5E32C00EC3131 /* Store.m */,
+				7E8F4F8F17D5E2F200EC3131 /* User.h */,
+				7E8F4F9017D5E2F200EC3131 /* User.m */,
+				7E8F4F8517D5E2CB00EC3131 /* machine */,
+			);
+			path = Enitites;
+			sourceTree = "<group>";
+		};
+		7E8F4F8517D5E2CB00EC3131 /* machine */ = {
+			isa = PBXGroup;
+			children = (
+				7E8F4F8617D5E2CB00EC3131 /* _LoginRequest.h */,
+				7E8F4F8717D5E2CB00EC3131 /* _LoginRequest.m */,
+				7E8F4F8817D5E2CB00EC3131 /* _LoginResponse.h */,
+				7E8F4F8917D5E2CB00EC3131 /* _LoginResponse.m */,
+				7E8F4FAA17D5E50A00EC3131 /* _Role.h */,
+				7E8F4FAB17D5E50B00EC3131 /* _Role.m */,
+				7E8F4F9717D5E31C00EC3131 /* _Store.h */,
+				7E8F4F9817D5E31C00EC3131 /* _Store.m */,
+				7E8F4F9217D5E30700EC3131 /* _User.h */,
+				7E8F4F9317D5E30700EC3131 /* _User.m */,
+			);
+			path = machine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +514,18 @@
 				7E2ECBD217C6505600D68C69 /* AccountManager.m in Sources */,
 				7E9A1A6117C764D8005D31F4 /* UIAlertView+Block.m in Sources */,
 				7E3A84C217D4A78D0021F3F0 /* UncaughtExceptionHandler.m in Sources */,
+				7E8F4F8A17D5E2CB00EC3131 /* BaseEntity.m in Sources */,
+				7E8F4F8B17D5E2CB00EC3131 /* LoginRequest.m in Sources */,
+				7E8F4F8C17D5E2CB00EC3131 /* LoginResponse.m in Sources */,
+				7E8F4F8D17D5E2CB00EC3131 /* _LoginRequest.m in Sources */,
+				7E8F4F8E17D5E2CB00EC3131 /* _LoginResponse.m in Sources */,
+				7E8F4F9117D5E2F200EC3131 /* User.m in Sources */,
+				7E8F4F9417D5E30700EC3131 /* _User.m in Sources */,
+				7E8F4F9A17D5E31C00EC3131 /* _Store.m in Sources */,
+				7E8F4F9F17D5E32C00EC3131 /* Role.m in Sources */,
+				7E8F4FA017D5E32C00EC3131 /* Store.m in Sources */,
+				7E8F4FA617D5E3B900EC3131 /* XSDEnums.m in Sources */,
+				7E8F4FAC17D5E50B00EC3131 /* _Role.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

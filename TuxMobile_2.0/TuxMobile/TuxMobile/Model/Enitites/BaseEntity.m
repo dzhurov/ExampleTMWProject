@@ -8,6 +8,7 @@
 
 #import "BaseEntity.h"
 #import <objc/runtime.h>
+#import "XSDEnums.h"
 
 __strong static NSDateFormatter const *dateFormatter = nil;
 
@@ -39,7 +40,7 @@ __strong static NSDateFormatter const *dateFormatter = nil;
     return nil;
 }
 
-+ (NSArray*)mappedKays
++ (NSArray*)mappedKeys;
 {
     return nil;
 }
@@ -236,7 +237,7 @@ __strong static NSDateFormatter const *dateFormatter = nil;
 
 - (NSMutableDictionary*)dictionaryInfo
 {
-    [self dictionaryInfoForKeys:[BaseEntity mappedKays]];
+    return [self dictionaryInfoForKeys:[BaseEntity mappedKays]];
 }
 
 - (void)setDictionaryInfo:(NSDictionary *)dictionaryInfo

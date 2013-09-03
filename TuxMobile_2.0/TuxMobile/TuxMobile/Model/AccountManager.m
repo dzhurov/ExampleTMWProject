@@ -9,6 +9,9 @@
 #import "AccountManager.h"
 #import "ServerInteractionManager.h"
 #import "Notifications.h"
+#import "LoginRequest.h"
+#import "LoginResponse.h"
+#import "User.h"
 
 #define kLoginKey           @"loginKey"
 #define kPasswordKey        @"passwordKey"
@@ -39,7 +42,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
     if (self) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSData *user = [defaults objectForKey:kEncodedUserKey];
-        self.user = (MWUser *)[NSKeyedUnarchiver unarchiveObjectWithData: user];
+        self.user = (User *)[NSKeyedUnarchiver unarchiveObjectWithData: user];
         _token = [[NSUserDefaults standardUserDefaults] objectForKey:kTokenKey] ;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -56,32 +59,28 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
 
 - (void)userLogin:(NSString *)login password:(NSString *)password completionBlock:(void (^)(NSError *))completionBlock
 {
-    LoginEntity *loginEntity = [LoginEntity loginEntityWithLogin:login password:password];
-    [[ServerInteractionManager sharedManager] userLogin:loginEntity responseBlock:^(NSDictionary *loginResponse, NSError *error) {
+    LoginRequest *loginEntity = [LoginRequest new];
+    loginEntity.userId = login;
+    loginEntity.password = password;
+    [[ServerInteractionManager sharedManager] userLogin:[loginEntity dictionaryInfo] responseBlock:^(NSDictionary *loginResponse, NSError *error) {
         if (error){
             completionBlock(error);
             return;
         }
         else{
-            [_token release];
-            _token = [[loginResponse objectForKey:@"token"] retain];
+            _token = [loginResponse objectForKey:@"token"];
             [[NSUserDefaults standardUserDefaults] setObject:_token forKey:kTokenKey];
             NSString *expDateString = [loginResponse objectForKey:@"expirationDate"] ;
-            [_expirationDate release];
-            _expirationDate = [[[NSDateFormatter yearMonthDayAndTimeDateFormatter] dateFromString:expDateString] retain];
+            _expirationDate = [[NSDateFormatter yearMonthDayAndTimeDateFormatter] dateFromString:expDateString];
             [[NSUserDefaults standardUserDefaults] setObject:_expirationDate forKey:kExpirationDateKey];
-            MWUser *user = [[MWUser alloc] initWithJSONDictionary:[loginResponse objectForKey:@"user"]];
+            User *user = [[User alloc] initWithDictionaryInfo:[loginResponse objectForKey:@"user"]];
             self.user = user;
             NSData *encodedUser = [NSKeyedArchiver archivedDataWithRootObject:user];
             [[NSUserDefaults standardUserDefaults] setObject:encodedUser forKey:kEncodedUserKey];
-            [user release];
             
             [[NSUserDefaults standardUserDefaults] setObject:login forKey:kLoginKey];
             [[NSUserDefaults standardUserDefaults] setObject:password forKey:kPasswordKey];
-            
-            NSDictionary *storeInfo = [[loginResponse objectForKeyOrNilIfNotExists: @"user"] objectForKeyOrNilIfNotExists:@"store"];
-            [[MWStoreManager sharedStoreManager] userDidLoginStoreInfo:storeInfo];
-            
+                        
             completionBlock(nil);
         }
     }];
@@ -92,30 +91,28 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
     if ([self userHasBeenLoggedIn]){
         NSString *login = [[NSUserDefaults standardUserDefaults] objectForKey:kLoginKey];
         NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:kPasswordKey];
-        LoginEntity *loginEntity = [LoginEntity loginEntityWithLogin:login password:password];
-        NSDictionary *loginResponseDict = [[ServerInteractionManager sharedManager] synchronousLogin:loginEntity error:error];
+        LoginRequest *loginEntity = [LoginRequest new];
+        loginEntity.userId = login;
+        loginEntity.password = password;
+        // 
+        NSDictionary *loginResponseDict = [[ServerInteractionManager sharedManager] synchronousLogin:[loginEntity dictionaryInfo] error:error];
         if (*error){
             return NO;
         }
         else{
             NSString *token = [loginResponseDict objectForKey:@"token"];
             if (token.length){
-                [_token release];
-                _token = [token retain];
+                _token = token ;
                 [[NSUserDefaults standardUserDefaults] setObject:_token forKey:kTokenKey];
                 NSString *expdateString = [loginResponseDict objectForKey:@"expirationDate"];
-                [_expirationDate release];
-                _expirationDate = [[[NSDateFormatter yearMonthDayAndTimeDateFormatter] dateFromString:expdateString] retain];
+                _expirationDate = [[NSDateFormatter yearMonthDayAndTimeDateFormatter] dateFromString:expdateString] ;
                 [[NSUserDefaults standardUserDefaults] setObject:_expirationDate forKey:kExpirationDateKey];
-                NSDictionary *storeInfo = [[loginResponseDict objectForKeyOrNilIfNotExists: @"user"] objectForKeyOrNilIfNotExists:@"store"];
                 
-                MWUser *user = [[MWUser alloc] initWithJSONDictionary:[loginResponseDict objectForKey:@"user"]];
+                User *user = [[User alloc] initWithDictionaryInfo:[loginResponseDict objectForKey:@"user"]];
                 self.user = user;
                 NSData *encodedUser = [NSKeyedArchiver archivedDataWithRootObject:user];
                 [[NSUserDefaults standardUserDefaults] setObject:encodedUser forKey:kEncodedUserKey];
-                [user release];
                 
-                [[MWStoreManager sharedStoreManager] userDidLoginStoreInfo:storeInfo];
                 *error = nil;
                 return YES;
             }
@@ -139,8 +136,6 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
 {
     return [[ServerInteractionManager sharedManager] userLogoutResponseBlock:^(id _null, NSError *error) {
         if (!error){
-            [_token release], _token = nil;
-            [_expirationDate release], _expirationDate = nil;
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             [userDefaults removeObjectForKey:kLoginKey];
             [userDefaults removeObjectForKey:kPasswordKey];
@@ -164,7 +159,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
 - (NSString *)token
 {
     if (!_token){
-        _token = [[[NSUserDefaults standardUserDefaults] objectForKey:kTokenKey] retain];;
+        _token = [[NSUserDefaults standardUserDefaults] objectForKey:kTokenKey];
     }
     return _token;
 }
@@ -172,7 +167,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
 - (NSDate *)expirationDate
 {
     if (!_expirationDate){
-        _expirationDate = [[[NSUserDefaults standardUserDefaults] objectForKey:kExpirationDateKey] retain];
+        _expirationDate = [[NSUserDefaults standardUserDefaults] objectForKey:kExpirationDateKey];
     }
     return _expirationDate;
 }
@@ -208,48 +203,6 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(AccountManager, sharedAccountMa
     }
     
 }
-
-- (NSOperation *)createAccountForUser:(MWUser *)user storeId:(NSString *)storeId completionBlock:(void (^)(MWUser *user, NSError *))completionBlock
-{
-    return [[ServerInteractionManager sharedManager] createAccountForUser:user storeId:storeId responseBlock:^(NSDictionary *response, NSError *error) {
-        if(error){
-            completionBlock(nil,error);
-            return;
-        }
-        user.id = [response objectForKeyOrNilIfNotExists:@"id"];
-        completionBlock(user, error);
-    }];
-}
-
-
-- (NSOperation*)getAccountsForStoreId: (NSString*) storeId
-                      completionBlock: (void (^)(NSArray* users, NSError* error)) completionBlock
-{
-    return [[ServerInteractionManager sharedManager] getUsersOfStoreId:storeId responseBlock:^(NSArray *users, NSError *error) {
-        if (error){
-            completionBlock(nil, error);
-        }
-        else{
-            NSMutableArray *usersEntities = [NSMutableArray arrayWithCapacity:users.count];
-            for (NSDictionary *userInfo in users) {
-                MWUser *user = [[MWUser alloc] initWithJSONDictionary:userInfo];
-                [usersEntities addObject:user];
-                [user release];
-            }
-            completionBlock (usersEntities, error);
-        }
-    }];
-}
-
-- (NSOperation *)deleteUserById:(NSNumber *)userId completionBlock:(void (^)(NSError *))completionBlock
-{
-    return [[ServerInteractionManager sharedManager] deleteUserId:userId responseBlock:^(NSDictionary *response, NSError *error)
-    {
-        if (completionBlock)
-            completionBlock(error);
-    }];
-}
-
 
 
 @end
