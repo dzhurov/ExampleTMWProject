@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 
+
+- (IBAction)signInButtonPressed:(id)sender;
+
 @end
 
 @implementation MWLoginViewController
@@ -39,4 +42,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)signInButtonPressed:(id)sender
+{
+    DDLogVerbose(@"%@", sender);
+    
+    MWLoginViewController* login = [MWLoginViewController new];
+    login.title = [NSString stringWithFormat:@"%d", self.navigationController.viewControllers.count+1];
+    [self.navigationController pushViewController:login animated:YES];
+}
 @end
